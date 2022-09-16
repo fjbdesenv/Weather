@@ -1,0 +1,31 @@
+.App{
+    padding: 1rem;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: black;
+}
+
+.App #title{
+    color: cornflowerblue;
+    margin: 2rem;
+
+    text-shadow: 0.1rem 0.1rem 0.5rem violet;
+}
+
+.App input, form{
+    text-align: center;
+
+    border-radius: 0.5rem;
+    border: 2px solid turquoise;
+    padding: 1rem;
+
+    color: blue;
+}
+
+.App input::placeholder{
+    color: deeppink;
+    text-align: left;
+
+}

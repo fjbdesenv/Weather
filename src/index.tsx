@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App title='Previsão do Tempo'/>
   </React.StrictMode>
 );
 
