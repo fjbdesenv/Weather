@@ -1,31 +1,21 @@
-.App{
-    padding: 1rem;
-
-    width: 100vw;
-    height: 100vh;
-
-    background: black;
-}
-
-.App #title{
-    color: cornflowerblue;
-    margin: 2rem;
-
-    text-shadow: 0.1rem 0.1rem 0.5rem violet;
-}
-
-.App input, form{
+#title{
     text-align: center;
+    padding: 1.5rem;
 
-    border-radius: 0.5rem;
-    border: 2px solid turquoise;
-    padding: 1rem;
+    color: #f00;
 
-    color: blue;
+    text-shadow: 1px 1px 2rem;
+
+    transition: ease-in-out 0.5s color;
+    animation:  alterColor 10s infinite;
 }
 
-.App input::placeholder{
-    color: deeppink;
-    text-align: left;
+.App{
+    background-color: honeydew;
+}
 
+@keyframes alterColor {
+    50% {
+        color: #0ff;
+    }
 }

@@ -1,0 +1,24 @@
+
+.weather{
+    margin: 2rem;
+    width: 100vw;
+}
+
+.weather h1{
+    text-align: center;
+    color: cornflowerblue;
+    
+}
+
+.weather div{
+    margin: 1rem 5px;
+}
+
+.weather img{
+    margin-top: 1.5rem;
+}
+
+.weather .status{
+    color: darkorange;
+    font-size: 1.2rem;
+}

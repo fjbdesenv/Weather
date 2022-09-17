@@ -1,32 +1,3 @@
-#search-cyte input{
-    text-align: center;
-
-    border-radius: 0.5rem;
-    border: 2px solid turquoise;
-    padding: 0.25rem;
-
-    color: blue;
-}
-
-#search-cyte input::placeholder{
-    color: deeppink;
-    text-align: left;
-    text-align: center;
-
-}
-
-#search-cyte{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@media screen and (max-width: 350px) {
-    #search-cyte{
-        flex-direction: column;
-    }
-    #search-cyte input{
-        margin: 4px 0;
-    }
+button{
+    margin: 3rem;
 }

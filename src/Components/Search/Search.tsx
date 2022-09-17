@@ -1,23 +1,28 @@
-import { Dispatch, SetStateAction } from 'react'
-
+import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
+import {Button, TextField, Container} from '@mui/material';
+import paramsSearch from '../../Interfaces/Params/Search';
 import './Search.css';
 
-interface params {
-    city: string,
-    setCyte: Dispatch<SetStateAction<string>>
-}
-
-export default function Seach ({city, setCyte}: params) {
+export default function Seach ({city, setCity, consult}: paramsSearch): ReactJSXElement {
     return(
-        <div id='search-cyte'>
-          <input 
-            type="text" 
-            name="city" 
-            id="city"
+        <Container maxWidth="sm">
+          <TextField
+            label='Cidade'
+            variant='standard'
             value={city}
-            onChange={(event) => setCyte(event.target.value)}
-            placeholder='Digite uma cidade'/>
-          <input type="submit" value={'Pesquisar'} />
-        </div>
+            onChange={(event) => setCity(event.target.value)}
+            placeholder='Digite uma cidade'
+          >
+          </TextField>
+          <Button 
+            variant="contained"
+            color="secondary"
+            type='submit'
+            onClick={(event) =>{
+              event.preventDefault();
+              consult(city);
+            }}
+          >Pesquisar</Button>
+        </Container>
     );
 }
