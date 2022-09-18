@@ -18,6 +18,9 @@ const checkStatus = (status:string):string => {
         case 'Partly cloudy':
             result = 'Parcialmente nublado';
             break;
+        case 'Light Rain Shower':
+            result = 'Chuva Leve';
+            break;
         default:
             result =  status;
             break;

@@ -12,6 +12,7 @@
 
 .App{
     background-color: honeydew;
+    height: 100%;
 }
 
 @keyframes alterColor {
@@ -19,3 +20,11 @@
         color: #0ff;
     }
 }
+
+/* @media screen and (max-width: 599px){
+    .App{
+        padding-left: 24px;
+        padding-right: 24px;
+        height: 100vh;
+    }
+} */
