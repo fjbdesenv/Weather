@@ -1,15 +1,21 @@
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import {Button, TextField, Container} from '@mui/material';
+import { FormEvent } from 'react';
 import paramsSearch from '../../Interfaces/Params/Search';
 import './Search.css';
 
-export default function Seach ({city, setCity, consult}: paramsSearch): ReactJSXElement {
-    return(
+export default function Seach ({seachCity, setCity, consult}: paramsSearch): ReactJSXElement {
+  const submit = (event:FormEvent<HTMLFormElement>) =>{
+    event.preventDefault();
+    consult();
+  }
+  
+  return(
         <Container maxWidth="sm">
           <TextField
             label='Cidade'
             variant='standard'
-            value={city}
+            value={seachCity}
             onChange={(event) => setCity(event.target.value)}
             placeholder='Digite uma cidade'
           >
@@ -18,10 +24,6 @@ export default function Seach ({city, setCity, consult}: paramsSearch): ReactJSX
             variant="contained"
             color="secondary"
             type='submit'
-            onClick={(event) =>{
-              event.preventDefault();
-              consult(city);
-            }}
           >Pesquisar</Button>
         </Container>
     );

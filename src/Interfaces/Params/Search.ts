@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
 export default interface paramsSearch {
-    city: string,
+    seachCity: string,
     setCity: Dispatch<SetStateAction<string>>,
-    consult: Dispatch<SetStateAction<any>>
+    consult: Function
 }

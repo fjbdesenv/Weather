@@ -9,24 +9,43 @@ const checkStatus = (status:string):string => {
         case 'Sunny':
             result = 'Ensolarado';
             break;
+        case 'Rainy':
+            result = 'Chuvoso';
+            break;
+        case 'Clear':
+            result = 'Claro';
+            break;
+        case 'Partly cloudy':
+            result = 'Parcialmente nublado';
+            break;
+        default:
+            result =  status;
+            break;
     }
     return result;
 }
 
-export default function Weather ({weather}:paramsWeather): ReactJSXElement{
+export default function Weather ({city, weather}:paramsWeather): ReactJSXElement{
     return(
         <Container className='weather' maxWidth="sm">
             
-            <h1>{weather.name}</h1>            
+            <h1>{city}</h1>            
             <h3>{weather.day}</h3>
 
-            <img src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png" alt="" />
-            <TextField label='Máxima' value={weather.max} type='text'></TextField>
-            <TextField label='Mínima' value={weather.min} type='text'></TextField>
-
-            <p className='status'>
-                {checkStatus(weather.status)}
+            <p>
+                <img src={weather.img} alt="" />
+                <span  className='status'> {checkStatus(weather.description)} </span>
             </p>
+
+            <hr />
+            <TextField label='Temperatura' value={weather.temperature} type='text'></TextField>
+            <TextField label='Umidade' value={weather.humidity} type='text'></TextField>
+            <TextField label='Pressão' value={weather.pressure} type='text'></TextField>
+            <TextField label='Visibildade' value={weather.visibility} type='text'></TextField>
+            <TextField label='País' value={weather.country} type='text'></TextField>
+            <TextField label='Região' value={weather.region} type='text'></TextField>
+            <TextField label='Latitude' value={weather.lat} type='text'></TextField>
+            <TextField label='Longitude' value={weather.lon} type='text'></TextField>
         
         </Container>
     );
