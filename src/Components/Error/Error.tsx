@@ -6,12 +6,13 @@ import './Error.css';
 export default function Error ({onclick}:paramsError): ReactJSXElement{
     return (
         <Container className='container-error'>
-            <Alert 
+            <Alert
+                className='alert' 
                 severity="warning"
                 action={
                     <Button variant='contained' onClick={() => onclick()}>Fechar</Button>
             }>
-                <AlertTitle> Erro </AlertTitle>
+                <AlertTitle > Erro </AlertTitle>
                 Erro ao fazer consulta, tente novamente!
             </Alert>
         </Container>

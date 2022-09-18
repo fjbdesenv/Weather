@@ -16,8 +16,6 @@ export default function Main(): ReactJSXElement {
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState(new ModelWeather('', '', '', '', '', '', '', '', '', '', ''));
 
-  axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     setCity(seachCity);
@@ -47,7 +45,6 @@ export default function Main(): ReactJSXElement {
 
     axios.get(URL_FULL).then((response) => {
       console.log("Successfully")
-      console.log(response.data)
       if(response.data?.error?.code === 601){
         console.error(response.data.error);
         setError(false);
