@@ -11,7 +11,7 @@ import './Main.css';
 export default function Main():ReactJSXElement{
 
     const [seachCity, setSeachCity] = useState('');
-    const [city, setCity] = useState('Brasilia');
+    const [city, setCity] = useState('');
     const [weather, setWeather] = useState(new ModelWeather('','','','','','','','','','',''));
 
     axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
@@ -44,9 +44,10 @@ export default function Main():ReactJSXElement{
       const URL_FULL = ENV.API_URL+'?access_key='+ENV.API_KEY_ACESS +'&query=' + city;
       
       axios.get(URL_FULL).then((response) => {
+        console.log("Successfully")
         updateWeather(response.data);
       }).catch((error) => {
-        console.log('Error: ', error);
+        console.error(error);
       })
     }
     

@@ -1,30 +1,12 @@
-#title{
-    text-align: center;
-    padding: 1.5rem;
-
-    color: #f00;
-
-    text-shadow: 1px 1px 2rem;
-
-    transition: ease-in-out 0.5s color;
-    animation:  alterColor 10s infinite;
-}
-
 .App{
-    background-color: honeydew;
+    background: url('./../../Assets/Imgs/background.jpg') no-repeat ;
+    
+    background-size: cover;
     height: 100%;
-}
+    width: 100%;
 
-@keyframes alterColor {
-    50% {
-        color: #0ff;
-    }
-}
+    margin: 1rem;
 
-/* @media screen and (max-width: 599px){
-    .App{
-        padding-left: 24px;
-        padding-right: 24px;
-        height: 100vh;
-    }
-} */
+    border-radius: 0.5rem;
+    box-shadow: -0.2rem -0.2rem 0.2rem 0.2rem black;
+}

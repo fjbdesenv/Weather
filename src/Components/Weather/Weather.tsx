@@ -33,7 +33,7 @@ export default function Weather ({city, weather}:paramsWeather): ReactJSXElement
         <Container className='weather' maxWidth="sm">
             
             <h1>{city}</h1>            
-            <h3>{weather.day}</h3>
+            <h2>{weather.day}</h2>
 
             <p>
                 <img src={weather.img} alt="" />
@@ -41,14 +41,14 @@ export default function Weather ({city, weather}:paramsWeather): ReactJSXElement
             </p>
 
             <hr />
-            <TextField label='Temperatura' value={weather.temperature} type='text'></TextField>
-            <TextField label='Umidade' value={weather.humidity} type='text'></TextField>
-            <TextField label='Pressão' value={weather.pressure} type='text'></TextField>
-            <TextField label='Visibildade' value={weather.visibility} type='text'></TextField>
-            <TextField label='País' value={weather.country} type='text'></TextField>
-            <TextField label='Região' value={weather.region} type='text'></TextField>
-            <TextField label='Latitude' value={weather.lat} type='text'></TextField>
-            <TextField label='Longitude' value={weather.lon} type='text'></TextField>
+            <TextField label='Temperatura' className='weather-box' value={weather.temperature} type='text'></TextField>
+            <TextField label='Umidade' className='weather-box' value={weather.humidity} type='text'></TextField>
+            <TextField label='Pressão' className='weather-box' value={weather.pressure} type='text'></TextField>
+            <TextField label='Visibildade' className='weather-box' value={weather.visibility} type='text'></TextField>
+            <TextField label='País' className='weather-box' value={weather.country} type='text'></TextField>
+            <TextField label='Região' className='weather-box' value={weather.region} type='text'></TextField>
+            <TextField label='Latitude' className='weather-box' value={weather.lat} type='text'></TextField>
+            <TextField label='Longitude' className='weather-box' value={weather.lon} type='text'></TextField>
         
         </Container>
     );
